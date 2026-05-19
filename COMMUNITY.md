@@ -22,22 +22,6 @@ Every tool, every pipeline, every kill chain documented in this repository is de
 
 </div>
 
----
-
-## 💀 What Can the Bot Do? (Live Commands)
-
-Once inside the server, you can interact with the AI directly:
-
-| Command | What It Does |
-|---------|-------------|
-| `/scan <target>` | Full port scan + service detection |
-| `/recon <target>` | Complete recon pipeline (IP → Ports → Subdomains → WHOIS → Shodan) |
-| `/exploit <target>` | Autonomous exploit chain — banner grab → CVE match → PoC fire |
-| `/killchain <target>` | Full 6-phase autonomous kill chain |
-| `/kb <query>` | Query the internal Knowledge Base (MITRE ATT&CK patterns, playbooks) |
-| `/fuzz <url>` | Autonomous XSS + SQLi fuzzer with baseline comparison |
-| `/spray <target>` | Credential spray across SSH, HTTP, FTP, MySQL |
-| `/ask <question>` | Ask the AI anything — it reasons using LLM + tool context |
 
 ---
 
