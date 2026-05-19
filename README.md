@@ -15,6 +15,7 @@ This directory contains the full architectural documentation for Xploit Hub AI �
 | [**API_INTEGRATIONS.md**](./API_INTEGRATIONS.md) | Every external API used (Shodan, NVD, DeepSeek, crt.sh), cost model, fallback strategies |
 | [**KNOWLEDGE_BASE.md**](./KNOWLEDGE_BASE.md) | Attack pattern library, service playbooks, self-learning evolution engine, MITRE ATT&CK mapping |
 | [**FUTURE_ROADMAP.md**](./FUTURE_ROADMAP.md) | Vision for v3.0+: custom model fine-tuning, real-time C2, multi-agent swarm |
+| [**COMMUNITY.md**](./COMMUNITY.md) | Live Discord server, bot commands, community info |
 
 ---
 
@@ -73,3 +74,29 @@ This directory contains the full architectural documentation for Xploit Hub AI �
 ---
 
 *Built with the philosophy: "Automate the boring. Accelerate the lethal. Remember everything."*
+
+---
+
+## 🌐 Community & Live Demo
+
+This architecture is not theoretical — the bot is **live and running** inside the Xploit Hub Discord server.
+
+<div align="center">
+
+### **[➜ Join Xploit Hub — discord.gg/4DTWQZG6rF](https://discord.gg/4DTWQZG6rF)**
+
+</div>
+
+Interact with the AI directly using slash commands like `/recon`, `/exploit`, `/killchain`, and `/kb`.
+Full command list and details: **[COMMUNITY.md](./COMMUNITY.md)**
+
+> **⚠️ Bot Offline Notice**
+> The bot is hosted on a personal instance and may occasionally appear offline due to maintenance or server restarts.
+> If the bot is offline:
+> - Wait up to **24 hours** — it will restart automatically in most cases.
+> - Or **DM the developer** directly via Discord for a faster response.
+> There is no cause for concern — all data and configurations are persistent and will resume normally on restart.
+
+---
+
+*"We don't just automate attacks. We build the system that automates the attacker."*
