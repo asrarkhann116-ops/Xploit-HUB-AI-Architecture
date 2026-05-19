@@ -88,7 +88,7 @@ This architecture is not theoretical — the bot is **live and running** inside 
 </div>
 
 Interact with the AI directly using only one slash commands `/ask prompt:`.
-Full command list and details: **[COMMUNITY.md](./COMMUNITY.md)**
+ for more info : **[COMMUNITY.md](./COMMUNITY.md)**
 
 > **⚠️ Bot Offline Notice**
 > The bot is hosted on a personal instance and may occasionally appear offline due to maintenance or server restarts.
