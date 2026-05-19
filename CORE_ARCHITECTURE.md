@@ -56,7 +56,7 @@ Our proudest module is the `autonomous_exploit_chain`. Here is the logic flow th
 
 ---
 
-## 4. Why We Built It This Way (The "12-Crore" Mindset)
+## 4. Why We Built It This Way (The "Main" Mindset)
 
 In modern enterprise security, the bottleneck is not a lack of tools; it is the **human analysis time** required to parse tool output. 
 
