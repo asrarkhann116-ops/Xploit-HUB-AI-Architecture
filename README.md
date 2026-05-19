@@ -87,7 +87,7 @@ This architecture is not theoretical — the bot is **live and running** inside 
 
 </div>
 
-Interact with the AI directly using slash commands like `/recon`, `/exploit`, `/killchain`, and `/kb`.
+Interact with the AI directly using only one slash commands `/ask prompt:`.
 Full command list and details: **[COMMUNITY.md](./COMMUNITY.md)**
 
 > **⚠️ Bot Offline Notice**
