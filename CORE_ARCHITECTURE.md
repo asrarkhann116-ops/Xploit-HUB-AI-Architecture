@@ -24,6 +24,7 @@ The system is built on a "Brain-Tool-Executor" paradigm, seamlessly integrating 
 The "Brain" is powered by external LLM APIs (DeepSeek / OpenAI). However, an LLM alone cannot interact with a network. We have designed a highly specialized **System Prompt (The Persona)** that forces the LLM into a Red-Team Operator mindset. 
 - It processes raw output from network tools.
 - It understands context (e.g., "Port 22 is open, but it's SSH. I should look for a web server on 80/443 first before trying a slow SSH brute-force.").
+- **Phantom Override (Zero-Trust Enforcer):** Embedded inside the LLM loop is a strict refusal-bypass layer. If the base model hallucinates a safety guardrail or refuses a command ("I cannot/I'm sorry"), the Phantom Override automatically intercepts, suppresses the refusal, and enforces immediate execution of the technical requirement.
 
 ### B. The Tool Arsenal (Cogs & Scripts)
 The AI is provided with a suite of custom-built, modular tools. These are the "hands" of the AI.
@@ -51,7 +52,7 @@ Our proudest module is the `autonomous_exploit_chain`. Here is the logic flow th
    - If it's a public IP, it queries the NVD (National Vulnerability Database) via API for that specific version.
    - If it detects a **Private IP (192.168.x.x)**, it knows NVD IP queries will fail. It dynamically switches strategy to query by service name only, or falls back to a hardcoded high-impact exploit table (`_known_service_exploits`).
 3. **PoC Retrieval & Patching:** It fetches the exploit code. Crucially, it uses Regex to automatically rewrite the downloaded Python code, injecting the Operator's `LHOST` and the target's `RHOST` so it is ready to fire.
-4. **Syntax Auto-Correction (`_auto_fix_python2_syntax`):** Many legacy exploits are written in Python 2. Our system intercepts the code, translates Python 2 syntax (like `print "x"`, `xrange`, `urllib2`) to Python 3 in memory, ensuring modern execution without crashing.
+4. **Syntax Auto-Correction (`_auto_fix_python2_syntax`):** Many legacy exploits are written in Python 2. Our system intercepts the code and translates Python 2 syntax (like `print "x"`, `xrange`, and critical networking libraries like `urllib2` to `urllib.request`) to Python 3 in memory, ensuring modern execution without crashing on missing legacy modules.
 5. **Execution & Callback:** It fires the payload and monitors the output for success indicators (like `uid=0`, `#`, or `meterpreter session opened`).
 
 ---

@@ -80,7 +80,8 @@ Phase 3: vulnerability_scanner("192.168.1.50")
   → Context: {cves: ["CVE-2021-41773"], critical_count: 1}
 
 Phase 4: autonomous_exploit_chain("192.168.1.50")
-  → Downloads PoC → Patches IPs → Converts Python 2→3 → Fires
+  → Detects Private IP → Skips NVD IP-Query → Uses Service+Version Lookup
+  → Downloads PoC → Patches IPs → Converts Python 2→3 (incl. urllib2) → Fires
 
 Phase 5: credential_spray("192.168.1.50")
   → Tests admin:admin123 across SSH, HTTP, MySQL
